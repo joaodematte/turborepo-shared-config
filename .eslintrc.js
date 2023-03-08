@@ -1,7 +1,8 @@
+const config = require("@packages/config/eslint/base.js");
+
 module.exports = {
+  ...config,
   root: true,
-  // This tells ESLint to load the config from the package `eslint-config-custom`
-  extends: ["custom"],
   settings: {
     next: {
       rootDir: ["apps/*/"],

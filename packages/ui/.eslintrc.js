@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [require.resolve("@packages/config/eslint/web.js")],
+  extends: [require.resolve("@packages/config/eslint/ui.js")],
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: "./tsconfig.json",
