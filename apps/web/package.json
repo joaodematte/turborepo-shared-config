@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "@packages/config": "workspace:^0.0.0",
+    "@packages/config": "workspace:*",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@packages/config": "workspace:^0.0.0",
+    "@packages/config": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },
