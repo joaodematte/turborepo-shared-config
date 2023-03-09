@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@apps/web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.2.3",
+    "@packages/ui": "workspace:*",
     "next": "^13.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
