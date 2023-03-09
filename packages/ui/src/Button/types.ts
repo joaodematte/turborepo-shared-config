@@ -1,6 +1,15 @@
+import { FlattenSimpleInterpolation } from 'styled-components';
+
+export type Variant = 'primary' | 'secondary' | 'ghost' | 'link' | 'danger';
+export type Size = 'small' | 'medium' | 'large';
+
+export type VariantSelector<T extends string> = {
+  [key in T]: FlattenSimpleInterpolation | undefined;
+};
+
 export type ButtonStylesProps = {
-  variant: 'primary' | 'secondary' | 'subtle';
-  size: 'sm' | 'md';
+  variant: Variant;
+  size: Size;
   disabled: boolean;
   loading: boolean;
 };

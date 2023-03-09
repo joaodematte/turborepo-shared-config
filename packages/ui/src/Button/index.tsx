@@ -3,7 +3,7 @@ import { StyledButton } from './styles';
 import { ButtonProps } from './types';
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = 'primary', size = 'md', children, loading = false, disabled = false, ...props }, ref) => {
+  ({ variant = 'primary', size = 'medium', children, loading = false, disabled = false, ...props }, ref) => {
     const isDisabled = disabled || loading;
 
     return (

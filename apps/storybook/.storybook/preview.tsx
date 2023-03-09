@@ -1,14 +1,14 @@
 import React from 'react';
-import { GlobalStyle } from '@packages/ui';
+import { GlobalStyle, ThemeProvider } from '@packages/ui';
 
-const withGlobalStyle = (Story) => (
-  <>
+const withProvider = (Story) => (
+  <ThemeProvider>
     <GlobalStyle />
     <Story />
-  </>
+  </ThemeProvider>
 );
 
-export const decorators = [withGlobalStyle];
+export const decorators = [withProvider];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
