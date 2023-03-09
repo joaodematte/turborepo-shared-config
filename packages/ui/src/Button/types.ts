@@ -1,3 +1,6 @@
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'subtle';
-}
+export type ButtonStylesProps = {
+  variant: 'primary' | 'secondary' | 'subtle';
+  size: 'sm' | 'md';
+};
+
+export type ButtonProps = Partial<ButtonStylesProps> & React.HTMLAttributes<HTMLButtonElement>;

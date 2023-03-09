@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { ButtonStylesProps } from './types';
 
 export const variantStyles = (variant = 'primary') =>
   ({
@@ -28,7 +29,19 @@ export const variantStyles = (variant = 'primary') =>
     `
   }[variant]);
 
-export const StyledButton = styled.button<{ variant: 'primary' | 'secondary' | 'subtle' }>`
+export const sizeStyles = (size = 'md') =>
+  ({
+    sm: css`
+      padding: 0.65625rem 1.171875rem;
+      font-size: 0.75rem;
+    `,
+    md: css`
+      padding: 0.875rem 1.5625rem;
+      font-size: 1rem;
+    `
+  }[size]);
+
+export const StyledButton = styled.button<ButtonStylesProps>`
   padding: 0.875rem 1.5625rem;
 
   border: 1px solid transparent;
@@ -43,10 +56,11 @@ export const StyledButton = styled.button<{ variant: 'primary' | 'secondary' | '
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0, 0, 1, 1);
 
-  &:focus-visible {
-    outline: 2px solid #000000;
-    outline-offset: 0.125rem;
-  }
-
   ${({ variant }) => variantStyles(variant)}
+  ${({ size }) => sizeStyles(size)}
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 `;
